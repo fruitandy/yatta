@@ -1,0 +1,277 @@
+/* ================================
+   FUENTES
+   ================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+/* ================================
+   BASE
+   ================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #d9a9e0;
+    background-image: url('fondo.png');
+    font-family: 'Secular One', arial, sans-serif;
+    color: #b06ab3;
+    font-size: 13px;
+    overflow-x: hidden;
+}
+
+a {
+    color: #c879cc;
+    text-decoration: none;
+}
+a:hover {
+    color: #a050a8;
+}
+
+blockquote {
+    border-left: 2px solid #e8a0ea;
+    padding-left: 10px;
+    margin: 8px 15px;
+    color: #9a5a9d;
+}
+
+p {
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+::selection {
+    color: #fff;
+    background-color: #d070d8;
+}
+
+* {
+cursor: none;
+    }
+/* ================================
+   CONTENEDOR PRINCIPAL
+   ================================ */
+
+#container {
+    width: 1000px;
+    margin: 30px auto 0 auto;
+    position: relative;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+
+#header-container {
+    width: 1000px;
+    border: 1px solid #e8a0d0;
+    background-color: #fff0f8;
+}
+
+#header-image {
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+}
+
+#header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+}
+
+/* ================================
+   BARRA DE NAVEGACIÓN
+   ================================ */
+
+#header-links-bar {
+    background-color: #f8b8d0;
+    border-top: 1px solid #f090b8;
+}
+
+.nav-link {
+    padding: 6px 10px;
+    color: #c050a0;
+    font-family: 'Secular One', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    border-right: 1px solid #f090b8;
+    cursor: pointer;
+    transition: background 0.15s;
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
+#header-links-bar table td:last-child .nav-link {
+    border-right: none;
+}
+
+.nav-link:hover,
+a:hover .nav-link {
+    background-color: #f4a0c8;
+    color: #903080;
+}
+
+/* ================================
+   FILA PRINCIPAL (sidebars + posts)
+   ================================ */
+
+#main-row {
+    display: flex;
+    width: 1000px;
+    height: 490px;
+    border-left: 1px solid #e8a0d0;
+    border-right: 1px solid #e8a0d0;
+    border-bottom: 1px solid #e8a0d0;
+}
+
+/* ================================
+   SIDEBARS
+   ================================ */
+
+#sidebar-left,
+#sidebar-right {
+    width: 205px;
+    flex-shrink: 0;
+    padding: 8px;
+    overflow: hidden;
+    background-color: #fce8f8;
+    background-image: url('');
+    color: #b06ab3;
+    font-size: 13px;
+    text-align: center;
+}
+
+#sidebar-left {
+    border-right: 1px solid #e8a0d0;
+}
+
+#sidebar-right {
+    border-left: 1px solid #e8a0d0;
+}
+
+#sidebar-left img,
+#sidebar-right img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================================
+   PANEL DE POSTS
+   ================================ */
+
+#post-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff8fc;
+    background-image: url('cuadricula.avif');
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    /* scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: #e8a0d0 #fff0f8;
+}
+#post-container::-webkit-scrollbar {
+    width: 8px;
+}
+#post-container::-webkit-scrollbar-track {
+    background: #fff0f8;
+}
+#post-container::-webkit-scrollbar-thumb {
+    background: #e8a0d0;
+    border-radius: 4px;
+}
+#pc {
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/* ================================
+   POSTS
+   ================================ */
+
+.post {
+    width: 400px;
+    padding: 6px;
+    border: 1px solid #f0b0d8;
+    margin: 10px 0 18px 0;
+    background-color: #fff8fc;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 19px,
+        #fce8f4 19px,
+        #fce8f4 20px
+    );
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.reblog-line {
+    margin: 6px 0 2px 0;
+    font-size: 12px;
+    color: #9a5a9d;
+}
+
+/* ================================
+   FOOTER DEL POST
+   ================================ */
+
+.footer {
+    padding: 6px 8px;
+    color: #b880bc;
+    background-color: #fce8f8;
+    border-top: 1px solid #f0b0d8;
+    margin-top: 6px;
+    font-size: 11px;
+}
+
+.footer a {
+    color: #c879cc;
+}
+
+.footer a:hover {
+    color: #903080;
+}
+
+.tags {
+    margin-top: 4px;
+    font-size: 11px;
+}
+
+.tags a {
+    margin-right: 4px;
+}
+
+/* ================================
+   NAVEGACIÓN PAGINACIÓN
+   ================================ */
+
+.nav a {
+    text-decoration: none;
+    color: #c879cc;
+    font-size: 22px;
+}
+
+/* ================================
+   CRÉDITO
+   ================================ */
+
+#c {
+    bottom: 5px;
+    right: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    position: fixed;
+}
